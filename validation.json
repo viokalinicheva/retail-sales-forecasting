@@ -1,0 +1,382 @@
+{
+  "project": "Retail Sales Forecasting During Structural Change",
+  "validated_on": "2026-10-28",
+  "source_notebook_sha256": "6fa4ec96dad974c001dd0c274d64d91f2758c950e9bb7c630ec8d89d6c46f580",
+  "raw_sha256": {
+    "us_retail_sales.csv": "eb11285b132aae04c91692c64b27f97e5e28e799f81e93ff1fca2e1db03ecf08"
+  },
+  "audit": {
+    "raw_year_rows": 30,
+    "raw_month_cells": 360,
+    "structural_blanks": 6,
+    "retained_months": 354,
+    "duplicates": 0,
+    "start": "1992-01-01",
+    "end": "2021-06-01",
+    "first_value": 146925.0,
+    "last_value": 550782.0
+  },
+  "design": {
+    "training_months": 342,
+    "training_end": "2020-06-01",
+    "test_months": 12,
+    "test_start": "2020-07-01",
+    "test_end": "2021-06-01",
+    "rolling_folds": 5,
+    "fold_horizon_months": 12,
+    "test_used_for_selection": false,
+    "fixed_input_vintage": "2021-07-16",
+    "real_time_vintage_backtest": false
+  },
+  "validation_comparison": [
+    {
+      "Model": "Linear Trend",
+      "Average_RMSE": 11343.172582051706,
+      "RMSE_Standard_Deviation": 8799.952849951715
+    },
+    {
+      "Model": "Linear Trend + Month Seasonality",
+      "Average_RMSE": 11370.490110778559,
+      "RMSE_Standard_Deviation": 8833.860634036708
+    },
+    {
+      "Model": "Seasonal Naive",
+      "Average_RMSE": 16301.330599600571,
+      "RMSE_Standard_Deviation": 6655.967709118208
+    }
+  ],
+  "validation_folds": [
+    {
+      "Validation Period": "Jul 2015\u2013Jun 2016",
+      "Model": "Linear Trend",
+      "RMSE": 2630.5091442725925
+    },
+    {
+      "Validation Period": "Jul 2015\u2013Jun 2016",
+      "Model": "Linear Trend + Month Seasonality",
+      "RMSE": 2440.5266218747724
+    },
+    {
+      "Validation Period": "Jul 2015\u2013Jun 2016",
+      "Model": "Seasonal Naive",
+      "RMSE": 7823.394691564526
+    },
+    {
+      "Validation Period": "Jul 2016\u2013Jun 2017",
+      "Model": "Linear Trend",
+      "RMSE": 4025.4278131308724
+    },
+    {
+      "Validation Period": "Jul 2016\u2013Jun 2017",
+      "Model": "Linear Trend + Month Seasonality",
+      "RMSE": 4232.807276525939
+    },
+    {
+      "Validation Period": "Jul 2016\u2013Jun 2017",
+      "Model": "Seasonal Naive",
+      "RMSE": 14231.253244766136
+    },
+    {
+      "Validation Period": "Jul 2017\u2013Jun 2018",
+      "Model": "Linear Trend",
+      "RMSE": 12443.23765238693
+    },
+    {
+      "Validation Period": "Jul 2017\u2013Jun 2018",
+      "Model": "Linear Trend + Month Seasonality",
+      "RMSE": 12521.619004973161
+    },
+    {
+      "Validation Period": "Jul 2017\u2013Jun 2018",
+      "Model": "Seasonal Naive",
+      "RMSE": 19630.39101750141
+    },
+    {
+      "Validation Period": "Jul 2018\u2013Jun 2019",
+      "Model": "Linear Trend",
+      "RMSE": 12993.317421205058
+    },
+    {
+      "Validation Period": "Jul 2018\u2013Jun 2019",
+      "Model": "Linear Trend + Month Seasonality",
+      "RMSE": 12960.134558863841
+    },
+    {
+      "Validation Period": "Jul 2018\u2013Jun 2019",
+      "Model": "Seasonal Naive",
+      "RMSE": 14258.032318077181
+    },
+    {
+      "Validation Period": "Jul 2019\u2013Jun 2020",
+      "Model": "Linear Trend",
+      "RMSE": 24623.370879263082
+    },
+    {
+      "Validation Period": "Jul 2019\u2013Jun 2020",
+      "Model": "Linear Trend + Month Seasonality",
+      "RMSE": 24697.363091655072
+    },
+    {
+      "Validation Period": "Jul 2019\u2013Jun 2020",
+      "Model": "Seasonal Naive",
+      "RMSE": 25563.5817260936
+    }
+  ],
+  "selected_model": "Linear Trend",
+  "test_rmse": 66432.62829228978,
+  "test_mae": 60125.809854423394,
+  "rmse_percent_of_test_mean": 12.914953826889139,
+  "underpredicted_months": 12,
+  "test_to_validation_rmse_ratio": 5.856617962192172,
+  "test_baselines": [
+    {
+      "model": "Linear Trend",
+      "rmse": 66432.62829228978,
+      "mae": 60125.809854423394
+    },
+    {
+      "model": "Linear Trend + Month Seasonality",
+      "rmse": 66597.43377417431,
+      "mae": 60121.49806779352
+    },
+    {
+      "model": "Seasonal Naive",
+      "rmse": 80273.26429193803,
+      "mae": 65226.75
+    }
+  ],
+  "monthly_predictions": [
+    {
+      "Date": "2020-07",
+      "Actual_Sales": 481627.0,
+      "Predicted_Sales": 449457.7625319408,
+      "Error": 32169.237468059175,
+      "Absolute_Error": 32169.237468059175
+    },
+    {
+      "Date": "2020-08",
+      "Actual_Sales": 483716.0,
+      "Predicted_Sales": 450330.80997684423,
+      "Error": 33385.19002315577,
+      "Absolute_Error": 33385.19002315577
+    },
+    {
+      "Date": "2020-09",
+      "Actual_Sales": 493327.0,
+      "Predicted_Sales": 451203.85742174776,
+      "Error": 42123.14257825224,
+      "Absolute_Error": 42123.14257825224
+    },
+    {
+      "Date": "2020-10",
+      "Actual_Sales": 493991.0,
+      "Predicted_Sales": 452076.9048666513,
+      "Error": 41914.09513334872,
+      "Absolute_Error": 41914.09513334872
+    },
+    {
+      "Date": "2020-11",
+      "Actual_Sales": 488652.0,
+      "Predicted_Sales": 452949.9523115547,
+      "Error": 35702.04768844531,
+      "Absolute_Error": 35702.04768844531
+    },
+    {
+      "Date": "2020-12",
+      "Actual_Sales": 484782.0,
+      "Predicted_Sales": 453822.9997564582,
+      "Error": 30959.000243541785,
+      "Absolute_Error": 30959.000243541785
+    },
+    {
+      "Date": "2021-01",
+      "Actual_Sales": 520162.0,
+      "Predicted_Sales": 454696.0472013616,
+      "Error": 65465.95279863838,
+      "Absolute_Error": 65465.95279863838
+    },
+    {
+      "Date": "2021-02",
+      "Actual_Sales": 504458.0,
+      "Predicted_Sales": 455569.09464626515,
+      "Error": 48888.90535373485,
+      "Absolute_Error": 48888.90535373485
+    },
+    {
+      "Date": "2021-03",
+      "Actual_Sales": 559871.0,
+      "Predicted_Sales": 456442.1420911687,
+      "Error": 103428.85790883133,
+      "Absolute_Error": 103428.85790883133
+    },
+    {
+      "Date": "2021-04",
+      "Actual_Sales": 562269.0,
+      "Predicted_Sales": 457315.1895360721,
+      "Error": 104953.81046392792,
+      "Absolute_Error": 104953.81046392792
+    },
+    {
+      "Date": "2021-05",
+      "Actual_Sales": 548987.0,
+      "Predicted_Sales": 458188.2369809756,
+      "Error": 90798.7630190244,
+      "Absolute_Error": 90798.7630190244
+    },
+    {
+      "Date": "2021-06",
+      "Actual_Sales": 550782.0,
+      "Predicted_Sales": 459061.28442587913,
+      "Error": 91720.71557412087,
+      "Absolute_Error": 91720.71557412087
+    }
+  ],
+  "elapsed_seconds": 2.708920459030196,
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "scikit-learn": "1.9.1",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.3.0",
+    "threadpoolctl": "3.7.0",
+    "xlrd": "2.0.2",
+    "pypdf": "6.10.0"
+  },
+  "sources_verified_on": "2026-10-28",
+  "sources": [
+    "https://www.census.gov/retail/mrts/www/benchmark/2021/excel/benchsales21.xls",
+    "https://www2.census.gov/retail/releases/historical/marts/adv2104.pdf",
+    "https://www2.census.gov/retail/releases/historical/marts/adv2105.pdf",
+    "https://www2.census.gov/retail/releases/historical/marts/adv2106.pdf",
+    "https://otexts.com/fpp3/toolbox.html"
+  ],
+  "source_proof": {
+    "acquisition": "Direct Census XLS plus three archived Census release PDFs",
+    "census_files_hash_verified": 4,
+    "canonical_numeric_sha256": "d68199ed407e7436e37a7063d0d80ffc067236a3f2813adbb4c0753719752543",
+    "verified_course_observations_equal": 354,
+    "census_revision_updates": [
+      {
+        "date": "2021-04-01",
+        "value": 555051,
+        "previous": null,
+        "source": "adv2104.pdf"
+      },
+      {
+        "date": "2021-03-01",
+        "value": 556804,
+        "previous": 551625,
+        "source": "adv2104.pdf"
+      },
+      {
+        "date": "2021-02-01",
+        "value": 504458,
+        "previous": 504548,
+        "source": "adv2104.pdf"
+      },
+      {
+        "date": "2020-04-01",
+        "value": 380015,
+        "previous": 380193,
+        "source": "adv2104.pdf"
+      },
+      {
+        "date": "2020-03-01",
+        "value": 434281,
+        "previous": 434467,
+        "source": "adv2104.pdf"
+      },
+      {
+        "date": "2021-05-01",
+        "value": 552932,
+        "previous": null,
+        "source": "adv2105.pdf"
+      },
+      {
+        "date": "2021-04-01",
+        "value": 562583,
+        "previous": 555051,
+        "source": "adv2105.pdf"
+      },
+      {
+        "date": "2021-03-01",
+        "value": 559871,
+        "previous": 556804,
+        "source": "adv2105.pdf"
+      },
+      {
+        "date": "2020-05-01",
+        "value": 444538,
+        "previous": 444897,
+        "source": "adv2105.pdf"
+      },
+      {
+        "date": "2020-04-01",
+        "value": 379892,
+        "previous": 380015,
+        "source": "adv2105.pdf"
+      },
+      {
+        "date": "2021-06-01",
+        "value": 550782,
+        "previous": null,
+        "source": "adv2106.pdf"
+      },
+      {
+        "date": "2021-05-01",
+        "value": 548987,
+        "previous": 552932,
+        "source": "adv2106.pdf"
+      },
+      {
+        "date": "2021-04-01",
+        "value": 562269,
+        "previous": 562583,
+        "source": "adv2106.pdf"
+      },
+      {
+        "date": "2020-06-01",
+        "value": 476343,
+        "previous": 476347,
+        "source": "adv2106.pdf"
+      },
+      {
+        "date": "2020-05-01",
+        "value": 444631,
+        "previous": 444538,
+        "source": "adv2106.pdf"
+      }
+    ],
+    "series": "Retail trade sales, excluding food services",
+    "unit": "Millions of nominal U.S. dollars",
+    "adjustment": "Seasonal, holiday, trading-day adjusted; not price adjusted",
+    "snapshot_vintage": "2021-07-16",
+    "real_time_vintage_backtest": false
+  },
+  "source_manifest_sha256": "967b19e344b1c3eaccefb9510c7bbffd7b65c871f89fcdbf515ee9300503db7d",
+  "census_source_sha256": {
+    "benchsales21.xls": "70390299d063d210ae006eafb058cd6c0e9c26fff4224c00f554a5fc067028c9",
+    "adv2104.pdf": "f42c5fad737b009f89fd9d175750123fc1956d0425f49df112ba9e968a182426",
+    "adv2105.pdf": "a046693b92ffd0f4203a23a70e46ca13d2311303d009485335c9455ccc781785",
+    "adv2106.pdf": "8ed65b055983f7d131df3201aad0d60787c67169acb3ff40eb169c3702e17a88"
+  },
+  "source_limit": "Fixed July 16, 2021 revised-data vintage, not a real-time historical availability backtest; nominal sales are not inflation adjusted.",
+  "execution": {
+    "fresh_kernel": true,
+    "executed_code_cells": 8,
+    "saved_errors": 0,
+    "wall_seconds": 3.7725046249688603,
+    "notebook_sha256": "24393e54c84eaedde1b3afba530657f47e5066e77933c7fbb90610bdb1906fe4"
+  },
+  "release_hashes": {
+    "run.py": "3619958c541cb6081f940579664ca86ef0b967bdf24d5c7821083ff70c9659df",
+    "requirements.txt": "5a4e49a0cf0d112887cb5dfa1f63fe9163f247252df7e9a1bd1e581a344d04f1",
+    "sources.json": "967b19e344b1c3eaccefb9510c7bbffd7b65c871f89fcdbf515ee9300503db7d",
+    "README.md": "2b629ab8fc9235d6faf9f3d1d4838bd43f59df50a94a5bcc191e5541b98d0a15"
+  }
+}

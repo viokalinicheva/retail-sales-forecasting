@@ -1,0 +1,51 @@
+{
+  "verified_date": "2026-10-28",
+  "original_course_csv_sha256": "fa034d22a15c7ce4ccfceba8221d9fd87fe9ceeccbf495b2123601f9e8f73b86",
+  "canonical_numeric_sha256": "d68199ed407e7436e37a7063d0d80ffc067236a3f2813adbb4c0753719752543",
+  "canonical_format": "354 ascending date,value pairs, YYYY-MM-DD,integer followed by LF, UTF-8, no header",
+  "numeric_equality_to_original": {"observations": 354, "exact_matches": 354, "maximum_absolute_difference": 0},
+  "series": "U.S. retail trade sales excluding food services; nominal millions of dollars; seasonally, holiday and trading-day adjusted, not price adjusted",
+  "snapshot_vintage": "2021-07-16",
+  "census_archives": [
+    {
+      "file": "benchsales21.xls",
+      "url": "https://www.census.gov/retail/mrts/www/benchmark/2021/excel/benchsales21.xls",
+      "sha256": "70390299d063d210ae006eafb058cd6c0e9c26fff4224c00f554a5fc067028c9",
+      "extraction": "Second Retail sales, total row under ADJUSTED on each year sheet; January 1992 through March 2021"
+    },
+    {
+      "file": "adv2104.pdf",
+      "url": "https://www2.census.gov/retail/releases/historical/marts/adv2104.pdf",
+      "sha256": "f42c5fad737b009f89fd9d175750123fc1956d0425f49df112ba9e968a182426",
+      "publication_date": "2021-05-14",
+      "extraction": "PDF page 5, Table 1 Retail row, final five adjusted columns",
+      "adjusted_column_dates": ["2021-04-01", "2021-03-01", "2021-02-01", "2020-04-01", "2020-03-01"],
+      "adjusted_retail_row_last_five": [555051, 556804, 504458, 380015, 434281]
+    },
+    {
+      "file": "adv2105.pdf",
+      "url": "https://www2.census.gov/retail/releases/historical/marts/adv2105.pdf",
+      "sha256": "a046693b92ffd0f4203a23a70e46ca13d2311303d009485335c9455ccc781785",
+      "publication_date": "2021-06-15",
+      "extraction": "PDF page 5, Table 1 Retail row, final five adjusted columns",
+      "adjusted_column_dates": ["2021-05-01", "2021-04-01", "2021-03-01", "2020-05-01", "2020-04-01"],
+      "adjusted_retail_row_last_five": [552932, 562583, 559871, 444538, 379892]
+    },
+    {
+      "file": "adv2106.pdf",
+      "url": "https://www2.census.gov/retail/releases/historical/marts/adv2106.pdf",
+      "sha256": "8ed65b055983f7d131df3201aad0d60787c67169acb3ff40eb169c3702e17a88",
+      "publication_date": "2021-07-16",
+      "extraction": "PDF page 5, Table 1 Retail row, final five adjusted columns",
+      "adjusted_column_dates": ["2021-06-01", "2021-05-01", "2021-04-01", "2020-06-01", "2020-05-01"],
+      "adjusted_retail_row_last_five": [550782, 548987, 562269, 476343, 444631]
+    }
+  ],
+  "metadata_references": [
+    "https://www.census.gov/retail/mrts/historic_releases.html",
+    "https://www.census.gov/retail/marts/www/timeseries.html",
+    "https://fred.stlouisfed.org/series/RSXFS"
+  ],
+  "rights_reference": "https://www2.census.gov/foia/ds_policies/ds027.pdf",
+  "rights_note": "Census DS027 page 9 states that works/data created by Census employees generally are not copyright protected in the United States. This package acquires original Census statistical tables, not FRED service content; it claims no endorsement or ownership of Census data. Raw archives are not redistributed."
+}
